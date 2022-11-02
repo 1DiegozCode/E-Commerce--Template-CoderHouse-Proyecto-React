@@ -1,0 +1,35 @@
+$UI-colors: (
+  primary-color-light: #1B4332,
+  secondary-color-light: #D8F3DC,
+  ternary-color-light: #547865,
+  product-background-light: #E9EAEA,
+
+  primary-color-dark: #1B4332,
+  secondary-color-dark: #0F3629,
+  ternary-color-dark: #547865,
+  product-background-dark: #575A5C
+);
+
+$background-colors: (
+  light: #F8F8F8,
+  dark: #252526
+);
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700
+);
+
+$font-colors: (
+  header-color-light: #FFFFFF,
+  primary-light: #000000,
+  secondary-light: #66696C,
+  highlighted-light: #52B788,
+
+  primary-dark: #F8F8F8,
+  secondary-dark: #66696C,
+  highlighted-dark: #52B788,
+)

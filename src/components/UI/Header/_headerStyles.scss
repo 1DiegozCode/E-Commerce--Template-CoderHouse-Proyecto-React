@@ -1,0 +1,110 @@
+@use '/src/styles/variables';
+
+.header{
+  height: 10vh;
+  width: 100%;
+  color: map-get(variables.$font-colors, header-color-light);
+  background-color: map-get(variables.$UI-colors, primary-color-light);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__logo {
+    text-decoration: none;
+    text-align: center;
+    font-weight: map-get(variables.$font-weights, medium);
+    color: map-get(variables.$font-colors, header-color-light);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  &__link {
+    font-weight: map-get(variables.$font-weights, light);
+    font-size: 1.2rem;
+    color: map-get(variables.$font-colors, header-color-light);
+  }
+}
+
+.cart-image {
+  height: 2.8rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.burger-menu {
+  height: 2.8rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.nav-bar__link{
+  text-decoration: none;
+  background-image: linear-gradient(map-get(variables.$font-colors, highlighted-light),map-get(variables.$font-colors, highlighted-light));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+  line-height: 30px;
+  margin: 35px 0;
+  cursor: pointer;
+  &:hover{
+      background-size: 100% 2px;
+      color: map-get(variables.$font-colors, highlighted-light) !important;
+  }
+}
+
+.menu-container{
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 10vh;
+  background-color: map-get(variables.$UI-colors, primary-color-light);;
+  text-align: center;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @media screen and (min-width: 768px){
+      width: 50%;
+      top: 0;
+      position: relative;
+      background-color: none;
+      text-align: center;
+      transition: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .nav-bar__link{
+      display: none;
+      @media screen and (min-width: 768px){
+          display: inline;
+  }
+  }
+}
+
+#check:checked ~ .menu-container{
+  height: 100vh;
+}
+#check:checked ~ .menu-container .nav-bar__link{
+  display: block;
+}
+
+#check{
+  display: none;
+}
+
+.bar-btn{
+  display: block;
+  cursor: pointer;
+  @media screen and (min-width: 768px){
+      display: none;
+  }
+}
+
+.cart-counter {
+  text-decoration: none;
+  color: map-get(variables.$font-colors, header-color-light);
+  font-weight: map-get(variables.$font-weights, medium);
+  font-size: 1.15rem;
+}

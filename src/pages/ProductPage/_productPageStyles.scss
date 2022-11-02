@@ -1,0 +1,181 @@
+@use '/src/styles/variables';
+
+.productPage-container {
+  height: 80vh;
+  max-height: fit-content;
+  width: 100%;
+  &__decoration {
+    height: 40%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: map-get(variables.$UI-colors, secondary-color-light);
+  }
+}
+
+.productInfo-container {
+  height: 90%;
+  position: relative;
+  top: -35%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: map-get(variables.$background-colors, light);
+  z-index: 2;
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.mainPhoto-container {
+  display: inline-block;
+  height: 28.125rem;
+  width: 28.125rem;
+  background-color: map-get(variables.$UI-colors, product-background-light);
+  border-radius: 20px;
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    height: 28.125rem;
+    width: 28.125rem;
+  }
+  @media (min-width: 0px) and (max-width: 576px) {
+    height: 18.75rem;
+    width: 18.75rem;
+  }
+  &__image {
+    height: 75%;
+    width: auto;
+  }
+}
+
+.mainInfo-container {
+  display: inline-block;
+  height: 28.125rem;
+  width: 28.125rem;
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    height: 28.125rem;
+    width: 28.125rem;
+  }
+  @media (min-width: 0px) and (max-width: 576px) {
+    height: 18.75rem;
+    width: 18.75rem;
+  }
+  &__product-name {
+    font-size: 3.1rem;
+    font-weight: map-get(variables.$font-weights, medium);
+    color: map-get(variables.$font-colors, primary-light);
+    @media (min-width: 1200px) and (max-width: 1400px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 992px) and (max-width: 1200px) {
+      font-size: 2.8rem;
+    }
+    @media (min-width: 768px) and (max-width: 992px) {
+      font-size: 2.6rem;
+    }
+    @media (min-width: 576px) and (max-width: 768px) {
+      font-size: 2.4rem;
+    }
+    @media (min-width: 0px) and (max-width: 576px) {
+      font-size: 2.2rem;
+    }
+  }
+  &__product-description {
+    font-size: 1rem;
+    font-weight: map-get(variables.$font-weights, regular);
+    color: map-get(variables.$font-colors, secondary-light);
+    @media (min-width: 576px) and (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+    @media (min-width: 0px) and (max-width: 576px) {
+      font-size: 0.9rem;
+    }
+  }
+  &__price {
+    text-align: left;
+    color: map-get(variables.$font-colors, highlighted-light);
+    font-weight: map-get(variables.$font-weights, medium);
+    font-size: 2rem;
+    @media (min-width: 576px) and (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+    @media (min-width: 0px) and (max-width: 576px) {
+      font-size: 1.1rem;
+    }
+    &--old {
+      text-align: left;
+      color: map-get(variables.$font-colors, secondary-light);
+      font-weight: map-get(variables.$font-weights, regular);
+      font-size: 2rem;
+      text-decoration: line-through;
+      @media (min-width: 576px) and (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+      @media (min-width: 0px) and (max-width: 576px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.full-heigh {
+  height: 100%;
+}
+
+.fit-height {
+  height: fit-content;
+}
+
+.counter {
+  width: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter input {
+  width: 3.125rem;
+  line-height: 1.875rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: map-get(variables.$font-colors, primary-light);
+  background-color: map-get(variables.$background-colors, light);
+  appearance: none;
+  outline: none;
+}
+.counter span {
+  display: block;
+  font-size: 1.5625rem;
+  padding: 0 0.625rem;
+  cursor: pointer;
+  color: map-get(variables.$font-colors, primary-light);
+  user-select: none;
+}
+
+.addToCart-container {
+  text-decoration: none;
+  cursor: pointer;
+  height: 15%;
+  width: 70%;
+  margin: auto;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  background-color: map-get(variables.$font-colors, highlighted-light);
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  &__cart-image {
+    height: 2.5rem;
+    width: auto;
+  }
+  &__message {
+    margin-top: 0.62rem;
+    letter-spacing: 0.0625rem;
+    color: map-get(variables.$font-colors, primary-light);
+    font-weight: map-get(variables.$font-weights, medium);
+    font-size: 1.7rem;
+    @media (min-width: 576px) and (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+    @media (min-width: 0px) and (max-width: 576px) {
+      font-size: 1.2rem;
+    }
+  }
+}

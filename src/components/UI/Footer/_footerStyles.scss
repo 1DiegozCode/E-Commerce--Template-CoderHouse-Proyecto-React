@@ -1,0 +1,60 @@
+@use '/src/styles/variables';
+
+.footer_container {
+  height: 80vh;
+  width: 100%;
+  background-color: map-get(variables.$UI-colors, primary-color-light);
+}
+
+.infoColumn {
+  &__title {
+    text-align: center;
+    font-weight: map-get(variables.$font-weights, medium);
+    color: map-get(variables.$font-colors, header-color-light);
+    font-size: 1.5rem;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: map-get(variables.$font-weights, regular);
+    color: map-get(variables.$font-colors, header-color-light);
+    font-size: 1.2rem;
+  }
+}
+
+.discount-form{
+  height: 20vh;
+  width: 70%;
+  border-radius: 20px;
+  background-color: map-get(variables.$UI-colors, ternary-color-light);
+  -webkit-box-shadow: 0px 5px 7px -1px rgba(0,0,0,0.53);
+  -moz-box-shadow: 0px 5px 7px -1px rgba(0,0,0,0.53);
+  box-shadow: 0px 5px 7px -1px rgba(0,0,0,0.53);
+  &__title {
+    text-align: center;
+    font-weight: map-get(variables.$font-weights, medium);
+    color: map-get(variables.$font-colors, header-color-light);
+    font-size: 1.5rem;
+  }
+  &__form {
+    text-align: center;
+    border-radius: 100px;
+    width: 65%;
+    height: 3.125rem;
+    border: 1px solid black;
+    color: map-get(variables.$font-colors, secondary-color-light);
+  }
+}
+
+.footer-bottom {
+  &__credits {
+    text-align: center;
+    font-weight: map-get(variables.$font-weights, regular);
+    color: map-get(variables.$font-colors, header-color-light);
+    font-size: 1rem;
+  }
+  &__image {
+    height: 40px;
+    width: auto;
+  }
+}

@@ -1,0 +1,98 @@
+@use '/src/styles/variables';
+
+.cart-container {
+  min-height: 80vh;
+  max-height: fit-content;
+  width: 100%;
+}
+
+.cartOrder-container {
+  min-height: 72vh;
+  max-height: fit-content;
+  background-color: map-get(variables.$background-colors, light);
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.full-height {
+  height: 100%;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10.9375rem;
+  width: 10.9375rem;
+  background-color: map-get(variables.$UI-colors, product-background-light);
+  border-radius: 20px;
+  &__image {
+    height: 75%;
+    width: auto;
+  }
+}
+
+.product-title {
+  text-align: left;
+  color: map-get(variables.$font-colors, primary-light);
+  font-weight: map-get(variables.$font-weights, medium);
+  font-size: 1.8rem;
+}
+
+.deleteProduct {
+  text-align: left;
+  color: map-get(variables.$font-colors, highlighted-light);
+  font-weight: map-get(variables.$font-weights, medium);
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.price {
+  text-align: left;
+  color: map-get(variables.$font-colors, highlighted-light);
+  font-weight: map-get(variables.$font-weights, medium);
+  font-size: 1.8rem;
+  &--old {
+    text-align: left;
+    color: map-get(variables.$font-colors, secondary-light);
+    font-weight: map-get(variables.$font-weights, medium);
+    font-size: 1.4rem;
+    text-decoration: line-through;
+  }
+  &--total {
+    text-align: center;
+    color: map-get(variables.$font-colors, highlighted-light);
+    font-weight: map-get(variables.$font-weights, medium);
+    font-size: 3rem;
+  }
+}
+
+.CheckOut-container {
+  cursor: pointer;
+  height: 4.6875rem;
+  width: 23.4375rem;
+  border-radius: 5px;
+  background-color: map-get(variables.$font-colors, highlighted-light);
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  &__cart-image {
+    height: 2.5rem;
+    width: auto;
+  }
+  &__message {
+    margin-top: 0.62rem;
+    letter-spacing: 0.0625rem;
+    color: map-get(variables.$font-colors, primary-light);
+    font-weight: map-get(variables.$font-weights, medium);
+    font-size: 2.5rem;
+    @media (min-width: 576px) and (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+    @media (min-width: 0px) and (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+  }
+}

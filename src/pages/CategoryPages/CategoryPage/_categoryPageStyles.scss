@@ -1,0 +1,109 @@
+@use '/src/styles/variables';
+
+.callToAction-container {
+  width: 100%;
+  height: 30vh;
+  background-color: map-get(variables.$UI-colors, secondary-color-light);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.main-message {
+  text-align: center;
+  font-weight: map-get(variables.$font-weights, semi-bold);
+  color: map-get(variables.$font-colors, primary-light);
+  font-size: 4rem;
+  letter-spacing: 4px;
+  @media (min-width:1200px) and (max-width: 1400px){
+    font-size: 3.8rem;
+  }
+  @media (min-width:992px) and (max-width: 1200px){
+      font-size: 3.6rem;
+  }
+  @media (min-width:768px) and (max-width: 992px){
+      font-size: 3.4rem;
+  }
+  @media (min-width:576px) and (max-width: 768px){
+      font-size: 3.2rem;
+  }
+  @media (min-width: 0px) and (max-width: 576px){
+      font-size: 2.6rem;
+      margin: 0px;
+  }
+}
+
+.qualities-message {
+  text-align: center;
+  font-weight: map-get(variables.$font-weights, medium);
+  color: map-get(variables.$font-colors, secondary-light);
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.qualities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+.areaName-text {
+  text-align: left;
+  color: map-get(variables.$font-colors, primary-light);
+  font-weight: map-get(variables.$font-weights, medium);
+  font-size: 2.8rem;
+  transition: .2s ease-out;
+}
+
+.product-card {
+  background-color: transparent;
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+  &:hover {
+    .product-card__image {
+      transform: scale(1.05);
+      transition: .15s ease-in;
+    }
+    .product-card__name {
+      color: map-get(variables.$font-colors, highlighted-light);
+      transition: .15s ease-in;
+    }
+  }
+  &__name {
+    text-align: left;
+    color: map-get(variables.$font-colors, primary-light);
+    font-weight: map-get(variables.$font-weights, medium);
+    font-size: 1.6rem;
+    transition: .15s ease-out;
+  }
+  &__image {
+    width: 100px;
+    height: auto;
+    transform: scale(1);
+    transition: .15s ease-out;
+  }
+  &__image-container {
+    height: 16.5rem;
+    width: 15.625rem;
+    background-color: map-get(variables.$UI-colors, product-background-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  &__price {
+    text-align: left;
+    color: map-get(variables.$font-colors, highlighted-light);
+    font-weight: map-get(variables.$font-weights, regular);
+    font-size: 1.25rem;
+    &--old {
+      text-align: right;
+      color: map-get(variables.$font-colors, secondary-light);
+      font-weight: map-get(variables.$font-weights, regular);
+      font-size: 1.25rem;
+      text-decoration: line-through;
+    }
+  }
+}
