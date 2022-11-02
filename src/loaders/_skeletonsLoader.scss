@@ -1,0 +1,25 @@
+@use '/src/styles/variables';
+
+.product-card-skeleton {
+  width: 15.625rem;
+}
+
+.product-card-skeleton__image-container {
+  height: 16.5rem;
+  width: 15.625rem;
+  border-radius: 10px;
+}
+
+.mainPhoto-container-skeleton {
+  height: 28.125rem;
+  width: 28.125rem;
+  border-radius: 20px;
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    height: 28.125rem;
+    width: 28.125rem;
+  }
+  @media (min-width: 0px) and (max-width: 576px) {
+    height: 18.75rem;
+    width: 18.75rem;
+  }
+}

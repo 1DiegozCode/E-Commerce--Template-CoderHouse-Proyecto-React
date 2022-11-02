@@ -24,11 +24,7 @@ export default function ProductPage() {
   return (
     <section className="productPage-container">
       <div className="productPage-container__decoration" />
-      {product === undefined ? (
-        <h4>Error: {feedbackMsg}</h4>
-      ) : (
-        <ProductInfo product={product as FirebaseProduct} />
-      )}
+      <ProductInfo product={product as FirebaseProduct} />
     </section>
   );
 }
